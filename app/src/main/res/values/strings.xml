@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">apdois</string>
+    <string name="toolbar_title">Lista de Filmes</string>
+    <string name="movie_poster">Poster do filme</string>
+    <string name="movie_title">Título do filme</string>
+    <string name="movie_description">Descrição do filme</string>
+</resources>
