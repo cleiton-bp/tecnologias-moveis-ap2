@@ -40,7 +40,7 @@ class DetailsActivity : AppCompatActivity() {
                 date.text = "Adicionado em: ${movie.createdAt}"
                 user.text = "Adicionado por: ${movie.addedBy}"
 
-                // Carrega a imagem da internet (fora da main thread)
+                // Carrega a imagem da internet
                 CoroutineScope(Dispatchers.IO).launch {
                     try {
                         val inputStream = URL(movie.imageUrl).openStream()

@@ -12,8 +12,7 @@ class MovieAdapter(
 ) : ListAdapter<Movie, MovieViewHolder>(MovieDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.movie_item_list, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.movie_item_list, parent, false)
         return MovieViewHolder(itemView = itemView, onDelete = onDelete, onDetails = onDetails)
     }
 

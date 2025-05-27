@@ -13,9 +13,9 @@ class MovieRepository {
             1995,
             4.8,
             true,
-            "01/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/574/CURIOSIDADES-SOBRE-TOY-STORY-CAPA.jpg"
         ),
         Movie(
             2,
@@ -25,23 +25,23 @@ class MovieRepository {
             "Andrew Adamson",
             2001,
             4.7,
-            true,
-            "02/06/2025",
+            false,
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://observatoriodocinema.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=904&height=508&format=.jpg&quality=91&imagick=/wp-content/uploads/2022/04/shrek-2-1200x675.jpg"
         ),
         Movie(
             3,
-            "Frozen",
-            "A rainha Elsa deve controlar seus poderes congelantes.",
+            "Monstros S.A.",
+            "Dois monstros trabalham em uma fábrica que assusta crianças para gerar energia.",
             "Animação",
-            "Chris Buck",
-            2013,
-            4.4,
+            "Pete Docter",
+            2001,
+            4.5,
             false,
-            "03/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://recreio.com.br/media/_versions/disney/monstrosss_sa_capa_widelg.jpg"
         ),
         Movie(
             4,
@@ -52,9 +52,9 @@ class MovieRepository {
             2015,
             4.6,
             false,
-            "04/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://rollingstone.com.br/media/_versions/2024/07/divertida-mente-2-se-torna-a-maior-animacao-da-historia-do-cinema_widelg.jpg"
         ),
         Movie(
             5,
@@ -65,9 +65,9 @@ class MovieRepository {
             2003,
             4.7,
             false,
-            "05/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://img.odcdn.com.br/wp-content/uploads/2024/06/procurando-nemo-1-1920x1080.jpg"
         ),
         Movie(
             6,
@@ -78,9 +78,9 @@ class MovieRepository {
             2004,
             4.6,
             false,
-            "06/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://cinevibes.com.br/wp-content/uploads/2024/08/Os-Incriveis-3-filme-tradicao-20-anos.jpg"
         ),
         Movie(
             7,
@@ -91,10 +91,11 @@ class MovieRepository {
             2007,
             4.5,
             false,
-            "07/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2016/07/01161158/Ratatouille-Movie.jpg"
         ),
+        //aaaaaaaa
         Movie(
             8,
             "Meu Malvado Favorito",
@@ -104,9 +105,9 @@ class MovieRepository {
             2010,
             4.3,
             false,
-            "08/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://historinhaspradormir.com.br/wp-content/uploads/2024/09/malvado-favorito.webp"
         ),
         Movie(
             9,
@@ -117,9 +118,9 @@ class MovieRepository {
             2016,
             4.4,
             false,
-            "09/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://observatoriodocinema.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=904&height=508&format=.jpg&quality=91&imagick=/wp-content/uploads/2016/02/zootopia.jpg"
         ),
         Movie(
             10,
@@ -130,9 +131,9 @@ class MovieRepository {
             1994,
             4.9,
             true,
-            "10/06/2025",
+            "24/05/2025",
             "Cleiton",
-            "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            "https://jornalismorio.espm.br/wp-content/uploads/2024/09/o-rei-leao.jpg"
         )
 
     )

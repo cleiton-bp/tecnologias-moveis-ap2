@@ -1,5 +1,6 @@
 package com.example.apdois.ui
 
+import android.graphics.Paint
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -39,15 +40,17 @@ class MovieViewHolder(
 
     private fun styleWatched(watched: Boolean) {
         if (watched) {
-            title.alpha = 0.6f
-            description.alpha = 0.6f
-            info.alpha = 0.6f
-            ratingYear.alpha = 0.6f
+            title.alpha = 0.8f
+            description.alpha = 0.8f
+            info.alpha = 0.8f
+            ratingYear.alpha = 0.8f
+            this.title.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
         } else {
             title.alpha = 1.0f
             description.alpha = 1.0f
             info.alpha = 1.0f
             ratingYear.alpha = 1.0f
+            this.title.paintFlags = 0
         }
     }
 }
