@@ -1,4 +1,4 @@
-package com.example.apdois.ui
+package com.example.apdois.ui.adapter
 
 import android.graphics.Paint
 import android.view.View

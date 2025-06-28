@@ -1,52 +1,35 @@
 package com.example.apdois
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
-import androidx.recyclerview.widget.RecyclerView
-import com.example.apdois.data.MovieRepository
-import com.example.apdois.data.model.Movie
-import com.example.apdois.ui.MovieAdapter
-import com.google.android.material.snackbar.Snackbar
-import com.example.apdois.R
+import androidx.appcompat.widget.Toolbar
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
 
 class MainActivity : AppCompatActivity() {
-    private val repository = MovieRepository()
-    private lateinit var adapter: MovieAdapter
+    private lateinit var navController: NavController
+    private lateinit var navHost: NavHostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        adapter = MovieAdapter(
-            onDelete = { movie ->
-                deleteMovie(recyclerView, movie)
-            },
-            onDetails = { movie ->
-                goToDetails(movie)
-            }
-        )
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
 
-        recyclerView.adapter = adapter
-        adapter.submitList(repository.movieList)
+        setSupportActionBar(toolbar)
+
+        navHost = supportFragmentManager.findFragmentById(R.id.nav_host_container) as NavHostFragment
+        navController = navHost.navController
+        val appBarConfiguration = AppBarConfiguration(navController.graph)
+
+        setupActionBarWithNavController(navController)
     }
 
-    private fun deleteMovie(recyclerView: RecyclerView, movie: Movie) {
-        val newList = repository.movieList.toMutableList()
-        newList.remove(movie)
-        adapter.submitList(newList)
-
-        Snackbar.make(recyclerView, "Filme deletado com sucesso", Snackbar.LENGTH_LONG).show()
-    }
-
-    private fun goToDetails(movie: Movie) {
-        val intent = Intent(this, DetailsActivity::class.java).apply {
-            putExtras(bundleOf("movie" to movie))
-        }
-        startActivity(intent)
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

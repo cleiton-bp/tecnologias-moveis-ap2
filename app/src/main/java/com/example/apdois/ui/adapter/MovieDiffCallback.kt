@@ -1,4 +1,4 @@
-package com.example.apdois.ui
+package com.example.apdois.ui.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.apdois.data.model.Movie
