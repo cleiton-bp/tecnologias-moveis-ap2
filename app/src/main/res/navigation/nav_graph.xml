@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listMoviesFragment_to_detailsMovieFragment"
             app:destination="@id/detailsMovieFragment" />
+        <action
+            android:id="@+id/action_listMoviesFragment_to_formMovieFragment"
+            app:destination="@id/formMovieFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsMovieFragment"
@@ -22,5 +25,13 @@
             android:id="@+id/action_detailsMovieFragment_to_listMoviesFragment"
             app:destination="@id/listMoviesFragment" />
         <argument android:name="movie" app:argType="com.example.apdois.data.model.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/formMovieFragment"
+        android:name="com.example.apdois.ui.fragments.FormMovieFragment"
+        android:label="Adicionar Filme" >
+        <action
+            android:id="@+id/action_formMovieFragment_to_listMoviesFragment"
+            app:destination="@id/listMoviesFragment" />
     </fragment>
 </navigation>

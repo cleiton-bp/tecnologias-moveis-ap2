@@ -37,7 +37,7 @@ class ListMoviesFragment : Fragment() {
         val recyclerView = binding.recyclerView
         adapter = MovieAdapter(
             onDelete = { movie ->
-                movieViewModel.deleteMovie(movie)
+                movieViewModel.removeMovie(movie)
 //                Snackbar.make(view, "Filme deletado com sucesso!", Snackbar.LENGTH_SHORT).show()
             },
             onDetails = { movie ->
@@ -46,7 +46,10 @@ class ListMoviesFragment : Fragment() {
         )
         recyclerView.adapter = adapter
 
-
+        binding.fabAdd.setOnClickListener {
+            val action = ListMoviesFragmentDirections.actionListMoviesFragmentToFormMovieFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun goToDetails(movie: Movie) {

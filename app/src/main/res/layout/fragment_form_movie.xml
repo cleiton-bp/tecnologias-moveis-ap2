@@ -2,10 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-        <!-- Declare ViewModel ou Binding se necessário -->
-    </data>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -121,10 +117,18 @@
 
             <Button
                 android:id="@+id/btnSave"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Salvar Filme"
-                android:layout_marginTop="24dp" />
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/toolbar_color"
+                android:elevation="4dp"
+                android:letterSpacing="0.05" />
         </LinearLayout>
     </ScrollView>
 </layout>
