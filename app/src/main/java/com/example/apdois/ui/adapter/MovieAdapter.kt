@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.example.apdois.R
 import com.example.apdois.data.model.Movie
+import com.example.apdois.databinding.MovieItemListBinding
 
 class MovieAdapter(
     private val onDelete: (Movie) -> Unit,
@@ -12,8 +13,10 @@ class MovieAdapter(
 ) : ListAdapter<Movie, MovieViewHolder>(MovieDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.movie_item_list, parent, false)
-        return MovieViewHolder(itemView = itemView, onDelete = onDelete, onDetails = onDetails)
+        val binding =
+            MovieItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+
+        return MovieViewHolder(binding = binding, onDelete = onDelete, onDetails = onDetails)
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {

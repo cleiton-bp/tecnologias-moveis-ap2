@@ -3,11 +3,11 @@ package com.example.apdois.data
 import com.example.apdois.data.model.Movie
 
 class MovieRepository {
-    val movieList = listOf(
+    val movieList = mutableListOf(
         Movie(
             1,
             "Toy Story",
-            "Brinquedos ganham vida quando ninguém está olhando.",
+            "Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.Brinquedos ganham vida quando ninguém está olhando.",
             "Animação",
             "John Lasseter",
             1995,

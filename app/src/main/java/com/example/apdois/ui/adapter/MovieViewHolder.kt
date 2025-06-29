@@ -1,56 +1,26 @@
 package com.example.apdois.ui.adapter
 
-import android.graphics.Paint
-import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.apdois.R
 import com.example.apdois.data.model.Movie
+import com.example.apdois.databinding.MovieItemListBinding
 
 class MovieViewHolder(
-    private val itemView: View,
+    private val binding: MovieItemListBinding,
     private val onDelete: (Movie) -> Unit,
     private val onDetails: (Movie) -> Unit
-) : RecyclerView.ViewHolder(itemView) {
-
-    private val title: TextView = itemView.findViewById(R.id.movieTitle)
-    private val description: TextView = itemView.findViewById(R.id.movieDescription)
-    private val info: TextView = itemView.findViewById(R.id.movieInfo)
-    private val ratingYear: TextView = itemView.findViewById(R.id.movieRatingYear)
-    private val actionDelete: TextView = itemView.findViewById(R.id.actionDeleteMovie)
-    private val actionDetails: TextView = itemView.findViewById(R.id.actionViewDetails)
+) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(movie: Movie) {
-        title.text = movie.title
-        description.text = movie.description
-        info.text = "${movie.genre} • ${movie.director}"
-        ratingYear.text = "★ ${movie.rating} • ${movie.releaseYear}"
+        binding.movie = movie
 
-        actionDelete.setOnClickListener {
+        // revisar
+        binding.actionDeleteMovie.setOnClickListener {
             onDelete(movie)
         }
 
-        actionDetails.setOnClickListener {
+        // revisar
+        binding.actionViewDetails.setOnClickListener {
             onDetails(movie)
-        }
-
-        // Visual feedback para "assistido"
-        styleWatched(movie.watched)
-    }
-
-    private fun styleWatched(watched: Boolean) {
-        if (watched) {
-            title.alpha = 0.8f
-            description.alpha = 0.8f
-            info.alpha = 0.8f
-            ratingYear.alpha = 0.8f
-            this.title.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-        } else {
-            title.alpha = 1.0f
-            description.alpha = 1.0f
-            info.alpha = 1.0f
-            ratingYear.alpha = 1.0f
-            this.title.paintFlags = 0
         }
     }
 }
