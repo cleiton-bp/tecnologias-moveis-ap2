@@ -5,28 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.navigation.fragment.navArgs
 import com.example.apdois.R
-import com.example.apdois.databinding.FragmentDetailsMovieBinding
+import com.example.apdois.databinding.FragmentFormMovieBinding
 
-class DetailsMovieFragment : Fragment() {
-    private lateinit var binding: FragmentDetailsMovieBinding
-    val args: DetailsMovieFragmentArgs by navArgs()
+class FormMovieFragment : Fragment() {
+    private lateinit var binding : FragmentFormMovieBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDetailsMovieBinding.inflate(inflater, container, false)
+        binding = FragmentFormMovieBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val movieArgs = args.movie
-        binding.movie = movieArgs
     }
 }

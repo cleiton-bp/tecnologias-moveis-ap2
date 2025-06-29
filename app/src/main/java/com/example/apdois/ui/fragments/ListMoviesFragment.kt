@@ -10,11 +10,13 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apdois.R
 import com.example.apdois.data.model.Movie
+import com.example.apdois.databinding.FragmentListMoviesBinding
 import com.example.apdois.ui.adapter.MovieAdapter
 import com.example.apdois.ui.viewmodel.MovieViewModel
 import com.google.android.material.snackbar.Snackbar
 
 class ListMoviesFragment : Fragment() {
+    private lateinit var binding: FragmentListMoviesBinding
     private lateinit var adapter: MovieAdapter
     private val movieViewModel: MovieViewModel by viewModels()
 
@@ -25,17 +27,18 @@ class ListMoviesFragment : Fragment() {
         movieViewModel.movieList.observe(viewLifecycleOwner) { movie ->
             adapter.submitList(movie.toMutableList())
         }
-        return inflater.inflate(R.layout.fragment_list_movies, container, false)
+        binding = FragmentListMoviesBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = binding.recyclerView
         adapter = MovieAdapter(
             onDelete = { movie ->
                 movieViewModel.deleteMovie(movie)
-                Snackbar.make(view, "Filme deletado com sucesso!", Snackbar.LENGTH_SHORT).show()
+//                Snackbar.make(view, "Filme deletado com sucesso!", Snackbar.LENGTH_SHORT).show()
             },
             onDetails = { movie ->
                 goToDetails(movie)

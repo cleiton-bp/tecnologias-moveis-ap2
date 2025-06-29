@@ -26,6 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="14dp"
+            android:checked="@{movie.watched}"
             android:backgroundTint="@color/cardview_light_background"
             android:elevation="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -44,11 +45,11 @@
                     android:id="@+id/titleWatchedContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="8dp"
-                    android:gravity="center_vertical"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
@@ -66,8 +67,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
                         android:text="– já assistido"
-                        android:textSize="16sp"
                         android:textColor="#888888"
+                        android:textSize="16sp"
                         android:visibility="@{movie.watched ? view.VISIBLE : view.GONE}" />
                 </LinearLayout>
 
