@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.apdois.R
 import com.example.apdois.databinding.FragmentDetailsMovieBinding
 
@@ -28,5 +29,11 @@ class DetailsMovieFragment : Fragment() {
 
         val movieArgs = args.movie
         binding.movie = movieArgs
+
+        // Carrega imagem com Glide
+        Glide.with(this)
+            .load(movieArgs.imageUrl)
+            .centerCrop()
+            .into(binding.movieImage)
     }
 }

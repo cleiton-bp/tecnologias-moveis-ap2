@@ -16,5 +16,5 @@ data class MovieEntity(
     val isWatched: Boolean = false,
     val createdAt: String = System.currentTimeMillis().toString(),
     val addedBy: String = "Não informado",
-    val imageUrl: String = "https://www.echapora.sp.gov.br/admin/globalarq/noticia/noticia/651_366/sem-foto.jpg"
+    val imageUrl: String
 )

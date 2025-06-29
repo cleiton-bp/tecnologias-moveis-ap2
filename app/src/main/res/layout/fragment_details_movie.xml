@@ -43,8 +43,7 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="20dp"
                     android:contentDescription="@string/movie_poster"
-                    android:scaleType="centerCrop"
-                    app:imageUrl="@{movie.imageUrl}" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
                     android:id="@+id/movieTitle"
